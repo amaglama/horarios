@@ -81,8 +81,7 @@ function obtenerSeleccion() {
 }
 
 document.getElementById("guardar").addEventListener("click", function(){
-  let filas = document.querySelector("#tabla-registros tbody").querySelectorAll("tr");
-  console.log(filas);
+  let filas = tabla.querySelectorAll("tr");
   let horario = [];
   filas.forEach(fila => {
     let checkeds = fila.querySelectorAll('.checkeds input:checked');
