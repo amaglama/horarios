@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <input type="text" id="empleados" name="empleados" list="list_personal">
+  <label>Emp-Code: <input type="text" name="code" disabled class="codigo_empleado"></label>
+  <datalist id="list_personal">
+      <option value = 1> Juan Perez</option>
+      <option value = 2> Maria Gonzalez</option>
+      <option value = 3> Pedro Rodriguez</option>
+      <option value = 4> Ana Ramirez</option>
+      <option value = 5> Carlos Lopez</option>
+  </datalist>
+
+    <table id="tabla-registros" class="table">
+        <thead>
+          <tr>
+            <th class="code_col">
+                <input type="button" value="+" id="agregar">
+            </th>
+            <th class="hora">Entrada</th>
+            <th class="hora">Salida</th>
+            <th class="dias_col">Días de la semana</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code_col">1</td>
+            <td class="hora">
+                <input type="time" name="entrada">
+            </td>
+            <td class="hora">
+                <input type="time" name="salida">
+            </td>
+            <td class="checkeds">
+              <label><input type="checkbox" name="default" value="default" checked><sup>L-V</sup></label>
+              <label><input type="checkbox" name="lunes" value="lunes"><sup>Lu</sup></label>
+              <label><input type="checkbox" name="martes" value="martes"><sup>Ma</sup></label>
+              <label><input type="checkbox" name="miercoles" value="miercoles"><sup>Mi</sup></label>
+              <label><input type="checkbox" name="jueves" value="jueves"><sup>Ju</sup></label>
+              <label><input type="checkbox" name="viernes" value="viernes"><sup>Vi</sup></label>
+              <label><input type="checkbox" name="sabado" value="sabado"><sup>Sa</sup></label>
+              <label><input type="checkbox" name="domingo" value="domingo"><sup>Do</sup></label>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+</body>
+<button id="guardar">Guardar</button>
+<script src="assets/index.js"></script>
+</html>

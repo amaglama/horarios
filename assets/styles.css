@@ -1,0 +1,35 @@
+.table{
+    width: 100%;
+}
+.table .dias_col{
+    text-align: left;
+    padding-left: 10px;
+}
+.table td{
+    border-bottom: 2px #222 solid;
+}
+.table .code_col{
+    width: 50px;
+    text-align: right;
+}
+.table .hora{
+    width: 80px;
+    text-align: center;
+}
+
+
+.table .checkeds{
+    display: flex;
+    
+}
+.table .checkeds label{
+    display: flex;
+    position: relative;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 40px;
+}
+
+.codigo_empleado{
+    width: 40px;
+}
