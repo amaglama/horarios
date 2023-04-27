@@ -59,8 +59,17 @@ input.addEventListener("input", function() {
   if (seleccionado) {
     emp_code.value = seleccionado.value;
     input.value = seleccionado.text;
-    console.log("Valor seleccionado: " + valor);
-    console.log("Texto seleccionado: " + texto);
+    let data = new FormData();
+    data.append('empleado',seleccionado.value);
+    fetch('server/horarios.php', {
+      method: "POST",
+      body: data,
+    })
+    .then(response => response.json()) 
+    .then(json => {
+      //aqui generar datos.
+    })
+    .catch(err => console.log(err));
   }
   else{
     document.querySelector("input[name='code']").value = '';
